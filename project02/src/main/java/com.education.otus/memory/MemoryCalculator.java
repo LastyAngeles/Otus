@@ -25,7 +25,7 @@ public class MemoryCalculator {
         long memory = getMem();
 
         for (int i = 0; i < ARR_SIZE; i++) {
-            byteMass[i] = (byte) 1;
+            byteMass[i] = 1;
         }
 
         long result = (getMem() - memory) / ARR_SIZE;
@@ -51,7 +51,7 @@ public class MemoryCalculator {
         short[] longMass = new short[ARR_SIZE];
 
         for (int i = 0; i < ARR_SIZE; i++) {
-            longMass[i] = (short) 1;
+            longMass[i] = 1;
         }
 
         long result = (getMem() - memory) / ARR_SIZE;
@@ -68,7 +68,20 @@ public class MemoryCalculator {
         }
 
         long result = (getMem() - memory) / ARR_SIZE;
-        System.out.println("Memory for short: " + result + ", mass length is " + ARR_SIZE);
+        System.out.println("Memory for char: " + result + ", mass length is " + ARR_SIZE);
+        return result;
+    }
+
+    public long calculateBoolean() throws InterruptedException {
+        long memory = getMem();
+        boolean[] longMass = new boolean[ARR_SIZE];
+
+        for (int i = 0; i < ARR_SIZE; i++) {
+            longMass[i] = true;
+        }
+
+        long result = (getMem() - memory) / ARR_SIZE;
+        System.out.println("Memory for boolean: " + result + ", mass length is " + ARR_SIZE);
         return result;
     }
 
