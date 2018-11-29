@@ -10,6 +10,7 @@
     <version>1.0-SNAPSHOT</version>
     <modules>
         <module>project02</module>
+        <module>project03</module>
     </modules>
 
 </project>

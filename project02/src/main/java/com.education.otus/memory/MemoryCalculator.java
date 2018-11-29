@@ -104,7 +104,8 @@ public class MemoryCalculator {
         calculateShort();
         calculateChar();
         calculateInt();
-        calculateLong();
+
+        calculateBoolean();
     }
 
     private long getMem() throws InterruptedException {
